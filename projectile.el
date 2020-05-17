@@ -2605,6 +2605,10 @@ test/impl/other files as below:
 (projectile-register-project-type 'nix '("default.nix")
                                   :compile "nix-build"
                                   :test "nix-build")
+(projectile-register-project-type 'bazel '("WORKSPACE")
+                                  :compile "bazel build %s"
+                                  :test "bazel test %s"
+                                  :run "bazel run %s")
 ;; Make & CMake
 (projectile-register-project-type 'make '("Makefile")
                                   :compile "make"
